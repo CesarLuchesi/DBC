@@ -1,0 +1,25 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+}
+header a:hover{
+  text-decoration: underline;
+}
+header{
+  display: flex;
+  
+}
+
+nav ul ui{
+  display: inline;
+}
+
+.galery > div {
+  margin: 10px;
+  flex: 1 1 300px;
+}
+

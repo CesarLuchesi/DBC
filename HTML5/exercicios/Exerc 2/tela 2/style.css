@@ -1,0 +1,76 @@
+* {
+  margin: 0 auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  height: 70px;
+  background: #1d1e20;
+}
+
+#logo {
+  position: absolute;
+  left: 0px;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+#menu {
+  position: absolute;
+  right: 0px;
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-family: Helvetica Neue;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+header a {
+  width: 55px;
+  height: 29px;
+  font-family: Helvetica Neue;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+header nav ul li {
+  display: inline;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+ /* caixas body*/
+img {
+  max-width: 100%;
+}
+
+.galery > div {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.galery {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

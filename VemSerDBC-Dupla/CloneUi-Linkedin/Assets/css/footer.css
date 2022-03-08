@@ -1,0 +1,148 @@
+.footer {
+  margin-top: 80px;
+  width: 100%;
+  height: 215px;
+  background-color: #f7f9fb;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  padding-left: 130px;
+  padding-top: 30px;
+}
+
+/* LOGO */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 130px;
+}
+.footer-logo img:first-child {
+  width: 46px;
+  height: 46px;
+}
+.footer-logo img {
+  width: 61px;
+  height: 21px;
+}
+
+/* Navigation */
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-navigation > a {
+  font-weight: bold;
+}
+.footer-navigation div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.footer-navigation-text a {
+  margin-bottom: 10px;
+}
+
+/* Footer SOlutions */
+
+.footer-solutions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+/* Fast access */
+
+.footer-access {
+  display: flex;
+  flex-direction: column;
+}
+.footer-access a {
+  font-weight: bold;
+  margin-bottom: 23px;
+}
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-questions input {
+  padding-right: 70px;
+  padding-left: 15px;
+}
+.button-settings input {
+  padding-right: 70px;
+  padding-left: 15px;
+}
+
+.button-questions input[type='button'] {
+  background-color: var(--blue10);
+  color: white;
+  width: 170px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.button-settings input[type='button'] {
+  background-color: transparent;
+  color: var(--blue10);
+  width: 170px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  outline: 1px solid var(--blue10);
+  cursor: pointer;
+}
+
+.button-questions input[type='button']:hover {
+  background-color: transparent;
+  color: var(--blue10);
+  outline: 1px solid var(--blue10);
+  transition: ease-in-out 200ms;
+}
+
+.button-settings input[type='button']:hover {
+  background-color: var(--blue10);
+  color: white;
+  outline: none;
+  transition: ease-in-out 200ms;
+}
+
+/* language */
+
+.footer-language {
+  display: flex;
+  flex-direction: column;
+  margin-right: 130px;
+  font-weight: bold;
+}
+.footer-language > label {
+  margin-bottom: 23px;
+}
+
+.footer-language select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 270px;
+  height: 32px;
+  background: url(../img/chevron-down.png) no-repeat;
+  background-position: 240px;
+  background-size: 20px;
+  cursor: pointer;
+  border: 1px solid white;
+  /* box-sizing: border-box; */
+  border-radius: 4px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.footer-language select:focus {
+  outline: 1px solid var(--blue10);
+}

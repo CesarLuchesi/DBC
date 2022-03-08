@@ -1,0 +1,124 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+
+header {
+  display: flex;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  height: 70px;
+  background: #1d1e20;
+}
+#logo {
+  position: absolute;
+  left: 0px;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+#menu {
+  position: absolute;
+  right: 0px;
+  padding-top: 20px;
+  padding-right: 40px;
+}
+header a:hover {
+  text-decoration: underline;
+}
+header nav ul li {
+  display: inline;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-family: Helvetica Neue;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+header a {
+  width: 55px;
+  height: 29px;
+  font-family: Helvetica Neue;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* main grid */
+
+main {
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+/* Caixas */
+
+.grid-caixas {
+  display: grid;
+  grid-template-columns: minmax(auto, 30%) minmax(auto, 30%) minmax(auto, 30%);
+  gap: 1.25em 1.25em;
+  margin-top: 2.5em;
+  max-width: 70%;
+  justify-content: center;
+}
+/* Propaganda */
+.grid-propaganda {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+}
+/* .grid-noticia  */
+h1 {
+  padding-top: 0.5625em;
+  font-size: 1.125em;
+}
+.borda {
+  border: 4px solid #000000;
+}
+.grid-propaganda img {
+  width: 100%;
+  height: 75%;
+}
+.grid-propaganda h3 {
+  padding: 0.625em 0;
+}
+
+.flex-dogs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.flex-dogs > .flex-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25em;
+}
+
+.flex-dogs > .flex-content img {
+  width: 50%;
+}
+
+.flex-dogs > .flex-content h2 {
+  padding-left: 0.625em;
+  font-size: 1.125em;
+}

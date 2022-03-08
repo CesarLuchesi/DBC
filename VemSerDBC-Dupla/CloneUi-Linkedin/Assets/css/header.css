@@ -1,0 +1,176 @@
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+img {
+  width: 100%;
+}
+
+header > a {
+  width: 130px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 155px;
+}
+
+header a > img {
+  width: 46px;
+  height: 46px;
+}
+
+nav {
+  display: flex;
+  width: 1200px;
+}
+
+nav > ul {
+  display: flex;
+}
+
+.notification{
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid orange;
+  background-color: orange;
+  color: #FFFFFF;
+  font-size: 10px;
+  top:12px;
+  left: 690px;
+}
+
+.left-menu {
+  width: 484px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 28px;
+  border-right: 1px solid #F4F4F4;
+  border-left: 1px solid #F4F4F4;
+}
+
+.left-menu li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.left-menu li a:hover {
+  color: var(--blue10)
+}
+
+.left-menu li a > p {
+  font-size: 12px;
+}
+
+.left-menu i {
+  margin-bottom: 10px;
+}
+
+.left-menu > li:first-child {
+  margin-left: 30px;
+}
+
+.left-menu > li:last-child {
+  margin-right: 30px;
+}
+
+
+.input-search {
+  width: 240px;
+  margin-left: 30px;
+  border-right: 1px solid #F4F4F4;
+}
+
+.fa-magnifying-glass {
+  color: var(--blue10)}
+
+input[type="text"] {
+  width: 180px;
+  height: 75px;
+  border: none;
+  padding-left: 10px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.person-ul {
+  display: flex;
+  align-items: center;
+  width: 330px;
+  border-right: 1px solid #F4F4F4;
+}
+
+.person-card {
+  display: flex;
+  margin-left: 30px;
+}
+
+.person-card p, .person-card span {
+  font-size: 12px;
+}
+
+.person-card img {
+  width: 42px;
+  height: 42px;
+  margin-right: 15px;
+}
+
+.person-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.person-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.person-name span {
+  color: #18181830;
+}
+
+.person-views span:first-child {
+  color: #747474;
+}
+
+.person-views span:last-child {
+  color: green;
+}
+
+.fa-arrow-right {
+  font-size: 14px;
+  transform: rotate(-45deg);
+}
+
+.other-ul {
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.other-ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 35px;
+}
+
+.other-ul li i {
+  font-size: 24px;
+}
+
+.other-ul li p {
+  font-size: 12px;
+}

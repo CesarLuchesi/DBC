@@ -1,0 +1,100 @@
+html,
+body,
+* {
+  font-family: 'roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  background-color: whitesmoke;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: aquamarine;
+  margin-top: 20px;
+}
+.forms {
+  background: aquamarine;
+  color: darkred;
+  padding: 5px;
+  margin: px 20px 20px 20px;
+  border-radius: 15px;
+  width: 300px;
+  padding: 30px;
+  box-sizing: border-box;
+  margin: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+.contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: aquamarine;
+  border-radius: 15px;
+}
+.contact a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  line-height: 25px;
+}
+.contact a:hover {
+  background-color: wheat;
+  color: black;
+}
+.contact a {
+  float: none;
+  width: 100%;
+}
+
+.boton {
+  padding: 5px;
+  margin: 20px 10px;
+  border-radius: px;
+  width: 300px;
+  padding: 20px;
+  margin: auto;
+  display: block;
+  max-width: 1200px;
+  text-align: center;
+  padding: 10px;
+}
+
+.text {
+  text-align: center;
+  margin: 0px 10px 10px 10px;
+}
+.back {
+  background-color: aquamarine;
+  border-radius: 15px;
+}
+.size {
+  font-size: x-large;
+}
+
+.mush {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.mushe {
+  display: block;
+  float: none;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 10px 10px 10px 10px;
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url(../fonts/Gotham\ Pro\ Regular.ttf);
+}
+
+:root {
+  --blue10:#0275B1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Gotham Pro';
+}
+
+body {
+  background-color:rgba(248, 248, 250, 1);
+}
+
+main{
+  width: 75%;
+}
+
+.main-feed {
+  width: 63%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+section {
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 18px;
+}

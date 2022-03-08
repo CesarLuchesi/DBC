@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>Html Forms</h1>
+    <form>
+      <label for="username">Digite seu usuário</label>
+      <input type="text" name="username" placeholder="Digite seu usuário" />
+      <br /><br />
+      <label for="email">Digite seu e-mail</label>
+      <input type="email" placeholder="Digite seu e-mail" />
+      <br /><br />
+      <label for="password">Digite sua senha</label>
+      <input type="password" name="password" placeholder="Digite sua senha" />
+
+      <p>Selecione sua idade</p>
+
+      <input type="radio" name="age" value="0-25" id="option-1" />
+      <label for="option-1">0-25</label>
+      <input type="radio" name="age" value="26-50" id="option-2" />
+      <label for="option-2">26-50</label>
+      <input type="radio" name="age" value="51+" id="option-3" />
+      <label for="option-3">51+</label>
+
+      <br /><br />
+
+      <label for="questions">Pergunta secreta</label>
+      <select name="questions" id="questions">
+        <option value="q1">Qual seu animal favorito?</option>
+        <option value="q2">Qual seu time do coração</option>
+        <option value="q3">Cidade de Nascimento</option>
+      </select>
+      <br /><br />
+
+      <label for="answer">Resposta secreta:</label>
+      <input
+        type="text"
+        id="answer"
+        name="answer"
+        placeholder="Digite a resposta secreta"
+      />
+
+      <br /><br />
+      <label for="bio">Sua Biografia</label>
+      <textarea
+        name="bio"
+        cols="30"
+        rows="10"
+        placeholder="Digite sua
+      Biografia"
+      ></textarea>
+    </form>
+
+    <br /><br />
+
+    <input type="submit" value="Salvar" />
+    <br /><br />
+
+    <iframe
+      width="300"
+      height="200"
+      src="https://www.youtube.com/embed/1LJGQb_pn6k"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <br /><br />
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14737.523091920248!2d-47.41381167267048!3d-22.56485771298646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c880f48250f89f%3A0xf369f3904507d114!2sCentro%2C%20Limeira%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1645473129658!5m2!1spt-BR!2sbr"
+      width="300"
+      height="200"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+html,
+css,
+* {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0px;
+  padding: 0px;
+}
+
+.teste {
+  width: 300px;
+  height: 300px;
+  background-color: aquamarine;
+  border: 3px solid blue;
+  margin: 30px 90px 120px 200px;
+  padding: 90px;
+}
