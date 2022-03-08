@@ -1,26 +1,26 @@
-let num1 = parseFloat(prompt('Insira o primeiro valor: '))
-let num2 = parseFloat(prompt('Insira o segundo valor: '))
-let operador = prompt(
+let var1 = parseFloat(prompt('Insira o primeiro valor: '))
+let var2 = parseFloat(prompt('Insira o segundo valor: '))
+let operadores = prompt(
   "Digite um operador, operações válidas: '+', '-', '*', '/')"
 )
 
-if (!isNaN(num1) && !isNaN(num2) && num1 / num2 !== Infinity) {
-  switch (operador) {
+if (!isNaN(var1) && !isNaN(var2) && var1 / var2 !== Infinity) {
+  switch (operadores) {
     case '+':
-      alert(`O resultado da soma: ${num1 + num2}`)
+      alert(`O resultado da soma: ${var1 + var2}`)
       break
     case '-':
-      alert(`O resultado da adição: ${num1 - num2}`)
+      alert(`O resultado da subtração: ${var1 - var2}`)
       break
     case '*':
-      alert(`O resultado da multiplicação: ${num1 * num2}`)
+      alert(`O resultado da multiplicação: ${var1 * var2}`)
       break
     case '/':
-      alert(`O resultado da divisão: ${num1 / num2}`)
+      alert(`O resultado da divisão: ${var1 / var2}`)
       break
     default:
       alert('operador inválido')
   }
 } else {
-  alert('Numeros inválidos, lembre-se de não dividir por zero')
+  alert('Numeros inválidos, não faça divisão por 0')
 }
