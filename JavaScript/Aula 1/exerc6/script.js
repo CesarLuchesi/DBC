@@ -2,9 +2,9 @@ alert(
   'Digite 1 para fazer chekin ou digite 2 para fazer checkout ou 3 para estender hospedagem ou 4 para sair'
 )
 
-let Menu = parseInt(prompt('Digite a opção desejada'))
-if (!isNaN(Menu) && Menu > 0 && Menu <= 4) {
-  switch (Menu) {
+let menu = parseInt(prompt('Digite a opção desejada'))
+if (!isNaN(menu) && menu > 0 && menu <= 4) {
+  switch (menu) {
     case 1:
       alert('Seja bem-vindo!')
       break
