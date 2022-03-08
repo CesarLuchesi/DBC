@@ -1,2 +1,2 @@
 # DBC
- Exercicios e aulas DBC
+ Exercicios e aulas da DBC Company
