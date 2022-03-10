@@ -1,0 +1,26 @@
+1) Crie uma função que inverta um número; (NÃO pode usar a função revert())
+   Exemplo: minhaFuncao(370914) // retorno esperado: 419073 (É o número 419073 e não a string '419073', o mesmo vale para o parâmetro passado);
+
+
+2) Crie uma função que recebe um array de números e encontre o segundo menor e o segundo maior número do array
+   e imprima eles no console (imprime somente 1 número se ele for o segundo menor e o segundo maior também);
+   Exemplo: minhaFuncao( [1, 3, 5, 7, 9] ) // neste caso, imprime: 3 e imprime: 7
+   Exemplo: minhaFuncao( [1, 3, 5] ) // neste caso, imprime somente o: 3
+
+
+3) Crie uma função que recebe uma string e coloca todas as primeiras letras em maiúsculo;
+   Exemplo: minhaFuncao( 'hoje faremos o trabalho em dupla, que legal - sqn' )
+   // neste caso retorna: 'Hoje Faremos O Trabalho Em Dupla, Que Legal - Sqn';
+   
+
+4) Crie uma função que receba uma string e imprime uma mensagem com a quantidade de vogais e a quantidade de consoantes na string 
+  da seguinte forma: 'A string [stringInformada] tem X vogas e X consoantes';
+  
+  // ex: contarVogaisConsoantes('Oi, tenho 5 anos de idade!!! ;D')  
+  =>  imprime:  A string "Oi, tenho 5 anos de idade!!! ;D" tem 10 vogais e 9 consoantes
+
+
+5) Crie uma função que imprima no console todas as possíveis combinações de uma string;
+  // ex: imprimirCombinacoes('tri')
+  => possiveis combinações da string "tri":  
+  't', 'tr', 'ti', 'tri', 'tir', 'r', 'rt', 'ri', 'rit', 'rti', 'i', 'ir', 'it', 'irt', 'itr'

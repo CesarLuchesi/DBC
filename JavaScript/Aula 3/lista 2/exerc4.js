@@ -8,7 +8,7 @@ function RemoveFirst() {
   lista.shift()
 }
 
-function RemoveLast() {
+function Removelast() {
   lista.pop()
 }
 
