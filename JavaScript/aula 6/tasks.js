@@ -42,7 +42,7 @@
   1 - Cadastrar Colaborador;
   2 - Marcar Ponto;
   3 - Ver Lista de Colaboradores;
-  4 - Ver Lista de Colaboradores Que Ainda Não Marcaram o Ponto; Usar desestruturação
+  4 - Ver Lista de Colaboradores Que Ainda Não Marcaram o Ponto;
   5 - Encerrar;
 */
 
