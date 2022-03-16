@@ -1,12 +1,15 @@
+// const TITULO_LISTA()
+// const TITULO_LISTA_VAZIA ()
+
 // Criar botão descartar para cada item
-let myNodelist = document.getElementsByTagName('LI')
+let myList = document.getElementsByTagName('LI')
 let i
-for (i = 0; i < myNodelist.length; i++) {
+for (i = 0; i < myList.length; i++) {
   let span = document.createElement('SPAN')
   let txt = document.createTextNode('\u00D7')
   span.className = 'close'
   span.appendChild(txt)
-  myNodelist[i].appendChild(span)
+  myList[i].appendChild(span)
 }
 
 // botão de fechar
@@ -23,9 +26,9 @@ for (i = 0; i < close.length; i++) {
 let list = document.querySelector('ul')
 list.addEventListener(
   'click',
-  function (ev) {
-    if (ev.target.tagName === 'LI') {
-      ev.target.classList.toggle('checked')
+  function (c) {
+    if (c.target.tagName === 'LI') {
+      c.target.classList.toggle('checked')
     }
   },
   false
