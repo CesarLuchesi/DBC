@@ -42,13 +42,13 @@
   1 - Cadastrar Colaborador;
   2 - Marcar Ponto;
   3 - Ver Lista de Colaboradores;
-  4 - Ver Lista de Colaboradores Que Ainda Não Marcaram o Ponto;
+  4 - Ver Lista de Colaboradores Que Ainda Não Marcaram o Ponto; 
   5 - Encerrar;
 */
 
 //array geral colaboradores
 let colaboradores = []
-
+let idSistema = 0
 //classe do colaborador
 class Colaborador {
   id
@@ -62,7 +62,7 @@ class Colaborador {
   }
   static somaId() {
     // tentando fazer mesma logica do ID de antes
-    this.id = 1
+    this.id = 0
     if (colaboradores.lenght > 0) {
       this.id = colaboradores[colaboradores.lenght - 1].this.id + 1
     }

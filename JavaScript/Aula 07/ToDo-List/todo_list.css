@@ -1,0 +1,107 @@
+body {
+  height: 75%;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding-top: 20px;
+  padding: 30px 8px 12px 40px;
+  list-style-type: none;
+  background: red;
+  font-size: 18px;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Quando der checked muda o fundo do item*/
+ul li.checked {
+  background: green;
+  color: black;
+  text-decoration: line-through;
+}
+
+/* adiciona o checado depois do clique*/
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* botão de fechar */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+/* estilo do corpo*/
+.body {
+  background-color: white;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+header {
+  background-color: rgb(78, 78, 231);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  border-bottom: 2px solid black;
+  font-size: x-large;
+}
+
+.body:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/*estilo do input */
+input {
+  margin: 0;
+  border: 1px solid;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* estilo do botão adicionar */
+.addBtn {
+  padding: 10px;
+  width: 5%;
+  background: aqua;
+  color: black;
+  float: center;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px 15px 15px 15px;
+}
+
+/* alinhando o descrição to do */
+.align-desc {
+  text-align: left;
+  color: black;
+}
