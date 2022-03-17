@@ -19,35 +19,6 @@ class Colaborador {
   }
 }
 
-//Validação do nome
-const nameValidate = event => {
-  const input = event ? event.target : document.getElementById('enter-Name')
-  const { value: nome } = input
-  let error = document.getElementById('error-Name')
-
-  let charactersName = nome.split(' ').join('')
-  let realName = [...charactersName]
-
-  //valida se é letra
-  const notNumber = realName.every(c => isNaN(c))
-  const withoutspecialFeature = realName.every(
-    c => c.toUpperCase() !== c.toLowerCase()
-  )
-
-  //valida se não tem espaços
-  const noSpace = realName.some(c => c !== ' ')
-
-  const validString = notNumber && withoutspecialFeature && noSpace
-
-  if (!validString) {
-    error.classList.remove('d-none')
-    error.classList.add('text-danger')
-  } else {
-    error.classList.add('d-none')
-  }
-  return validString
-}
-
 // Valiodação de email
 const emailValidate = event => {
   const input = event ? event.target : document.getElementById('enter-Email')
@@ -89,12 +60,40 @@ const emailValidate = event => {
 
   return isValidt
 }
+//Validação do nome
+const nameValidate = event => {
+  const input = event ? event.target : document.getElementById('enter-Name')
+  const { value: nome } = input
+  let error = document.getElementById('error-Name')
+
+  let charactersName = nome.split(' ').join('')
+  let realName = [...charactersName]
+
+  //valida se é letra
+  const notNumber = realName.every(c => isNaN(c))
+  const withoutspecialFeature = realName.every(
+    c => c.toUpperCase() !== c.toLowerCase()
+  )
+
+  //valida se não tem espaços
+  const noSpace = realName.some(c => c !== ' ')
+
+  const validString = notNumber && withoutspecialFeature && noSpace
+
+  if (!validString) {
+    error.classList.remove('d-none')
+    error.classList.add('text-danger')
+  } else {
+    error.classList.add('d-none')
+  }
+  return validString
+}
 
 //Validação de senha
 const validatePassword = event => {
   const input = event ? event.target : document.getElementById('senha-input')
   const { value: senha } = input
-  let error = document.getElementById('senha-erro')
+  let error = document.getElementById('password-error')
 
   input.value = input.value.replaceAll(' ', '')
 
@@ -128,24 +127,6 @@ const validatePassword = event => {
 
   return isValidt
 }
-
-// Máscara no input
-const adicionarMascaraData = input => {
-  let dateInfo = document.getElementById('data-input').value
-  dateInfo = dateInfo.replaceAll('/', '')
-  let day = dateInfo.substring(0, 2)
-  let month = dateInfo.substring(2, 4)
-  let year = dateInfo.substring(4)
-
-  let dateNumbers = [...dateInfo]
-
-  if (dateNumbers.length === 2) {
-    document.getElementById('data-input').value = `${day}/`
-  } else if (dateNumbers.length === 5) {
-    document.getElementById('data-input').value = `${day}/${month}/${year}`
-  }
-}
-
 //Validação na Data
 const validarData = event => {
   const input = event ? event.target : document.getElementById('data-input')
@@ -171,6 +152,23 @@ const validarData = event => {
     error.classList.add('d-none')
   }
   return isValidt
+}
+
+// Máscara no input da data
+const adicionarMascaraData = input => {
+  let dateInfo = document.getElementById('data-input').value
+  dateInfo = dateInfo.replaceAll('/', '')
+  let day = dateInfo.substring(0, 2)
+  let month = dateInfo.substring(2, 4)
+  let year = dateInfo.substring(4)
+
+  let dateNumbers = [...dateInfo]
+
+  if (dateNumbers.length === 2) {
+    document.getElementById('data-input').value = `${day}/`
+  } else if (dateNumbers.length === 5) {
+    document.getElementById('data-input').value = `${day}/${month}/${year}`
+  }
 }
 
 // Digitando Novo colaborador
