@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "colaboradores": [
+    {
+      "nome": "admin",
+      "email": "a",
+      "senha": "a",
+      "id": 0
+    },
+    {
+      "id": 1,
+      "nome": "César Fernandes Luchesi",
+      "dataNascimento": "06/02/1998",
+      "email": "cesar@gmail.com",
+      "senha": "Testando123!!"
+    },
+    {
+      "id": 2,
+      "nome": "Cesar Teste",
+      "dataNascimento": "06/03/2002",
+      "email": "cesar@gmail.com",
+      "senha": "Testando123!!"
+    }
+  ]
+}
