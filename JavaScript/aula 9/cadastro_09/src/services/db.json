@@ -36,6 +36,20 @@
       "dataNascimento": "06/03/2002",
       "email": "cesar@gmail.com",
       "senha": "Testando123!!"
+    },
+    {
+      "id": 3,
+      "nome": "Cesar",
+      "dataNascimento": "02/06/2002",
+      "email": "cesar@cesar.com",
+      "senha": "Teste123!!"
+    },
+    {
+      "id": 4,
+      "nome": "Cesar Fernandes Luchesi",
+      "dataNascimento": "06/02/1998",
+      "email": "cesar@gml.com",
+      "senha": "Teste123!!!"
     }
   ]
 }
