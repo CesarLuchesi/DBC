@@ -1,3 +1,5 @@
+iniciar todas as aplicações - yarn add moment axios react-router-dom
+
 iniciar aplicação em react - npx start
 
 instalar global yarn - npm install --global yarn
@@ -5,3 +7,13 @@ instalar global yarn - npm install --global yarn
 checar versão do yarn - yarn --version
 
 instalar React router - npm install react-router-dom@6
+
+criar aplicação em react - npx create-create-app nomedoarquivo
+
+
+
+
+
+axios - yarn add axios
+
+yarn add moment

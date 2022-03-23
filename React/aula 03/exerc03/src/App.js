@@ -25,7 +25,7 @@ export default App;
 
 
 
-//usando Sttate lifth
+//usando Sttate lift
 // import {useState} from 'react'
 
 // import SeuNome from './components/SeuNome';
@@ -36,7 +36,7 @@ export default App;
 // const [idade,setIdade] = useState();
 //   return(
 //     <div className="App">
-//       <h1>State Lifth</h1>
+//       <h1>State Lift</h1>
 //       <SeuNome setNome={setNome} setIdade={setIdade}/>
 //       <Saudacao nome={nome} idade={idade}/>
 //     </div>
