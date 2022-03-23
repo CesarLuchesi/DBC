@@ -1,0 +1,11 @@
+.forms {
+  background: aquamarine;
+  color: darkred;
+  padding: 5px;
+  margin: 20px 20px 20px 20px;
+  border-radius: 15px;
+  width: 300px;
+  padding: 30px;
+  box-sizing: border-box;
+  margin: auto;
+}

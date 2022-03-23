@@ -1,0 +1,26 @@
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select, textarea {
+  width: 1000px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: transparent;
+  border: 1px solid #00C853;
+  color: black;
+  transition: all 200ms ease-in-out;
+}
+
+input[type=submit]:hover {
+  background-color: #00C853;
+  color: white;
+}

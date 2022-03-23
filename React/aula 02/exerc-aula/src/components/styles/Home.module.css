@@ -1,0 +1,13 @@
+.containerLogo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.mapa {
+  width: 100%;
+}
+
+.localizacao {
+  padding: 20px;
+}

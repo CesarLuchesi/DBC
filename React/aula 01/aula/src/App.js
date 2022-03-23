@@ -1,8 +1,15 @@
-import Sum from './components/Soma.js'
+
+import {useState} from 'react'
+import React from 'react'
+
+// import Form from './components/Forms';
+import Condicional from './components/Condicional'
+import './App.css'
+
 const App = () => {
-  return (
-    <div className="Sum">
-      <Sum valor1={10} valor2={10} />
+  return(
+    <div>
+     <Condicional/>
     </div>
   )
  }

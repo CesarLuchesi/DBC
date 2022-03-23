@@ -1,0 +1,10 @@
+.widht {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  -ms-flex-align: start;
+  border: 5px solid #ddd;
+  border-radius: 45px;
+  box-sizing: border-box;
+  margin: 15px;
+}
