@@ -7,6 +7,8 @@ import Home from "./components/Home";
 import Inicial from './components/Inicial';
 
 function App(){
+
+  
   return(
     <BrowserRouter>
     <Header/>

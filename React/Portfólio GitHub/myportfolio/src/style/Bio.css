@@ -1,0 +1,14 @@
+.Bio{
+  margin-left: 30px;
+}
+
+.linguagens{
+  font-size: x-large;
+  color: black;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+
+.linguagens:hover{
+  color: red;
+}

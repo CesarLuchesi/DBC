@@ -8,7 +8,7 @@ checar versão do yarn - yarn --version
 
 instalar React router - npm install react-router-dom@6
 
-criar aplicação em react - npx create-create-app nomedoarquivo
+criar aplicação em react - npx create-react-app nomedapasta
 
 
 
