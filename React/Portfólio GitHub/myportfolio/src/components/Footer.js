@@ -11,7 +11,7 @@ import MenuIcons from './MenuIcons';
 function Footer () {
     return(
       <footer>
-        <p>SOCIAL MEDIA</p>
+        <p>SOCIAL</p>
         <nav>
             <ul>
             <div className={styles.Footer} >

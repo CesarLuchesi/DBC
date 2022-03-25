@@ -8,7 +8,7 @@
   return (
       <div className={styles.menus}>
       <img src={avatar_url} alt="Imagem de Perfil" style={{height: '120px', width: '120px', borderRadius: '100px', paddingLeft: '20px', paddingTop:'10px'}} />
-      <p  style={{paddingLeft: '20px'}}>Olá me chamo {name} e sou {bio} </p>
+      <p  style={{paddingLeft: '20px', color:'#fff'}}>Olá me chamo {name} e sou {bio} </p>
       </div>
   )
 }

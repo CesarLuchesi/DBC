@@ -16,10 +16,10 @@ import styles from "../style/Header.css"
     <div >
     <header> 
       <div>
-      <Logo dados={dados} className={styles.left}/>
+      <Logo dados={dados} className='left'/>
       </div>
       <div >
-      <Menu className={styles.menus}/>
+      <Menu className='Menu'/>
       </div>
     </header>
     </div>

@@ -1,8 +1,8 @@
 footer{
-    bottom: 0;
-    position: fixed;
+  width: 10vh;
     flex-direction: row;
-    background-color: #f6f7fd;
+    background-color: rgba(40, 42, 54, 1);
+    /* background-color: #f6f7fd; */
     width: 100%;
     height: 10vh;
     font-weight: bold;
@@ -11,14 +11,20 @@ footer{
     display: flex;
     font-size: large;
     box-shadow: 0 5px 35px 0 rgba(4, 0, 255, 0.15);
+    color: #fff;
 }
 
 footer nav ul li {
   list-style: none;
   display: flex;
+  color: #fff;
 }
 footer nav ul li a:hover{
   color: #b17fd3;
   font-size: x-large;
   
+}
+
+footer nav ul li a{
+  color: #fff;
 }
