@@ -28,8 +28,9 @@ function WorkerForm() {
             role: role.current.value,
           },
         ],
+        
       });
-
+      
       await Swal.fire({
         title: "Trabalhador cadastrado com sucesso!",
         icon: "success",
@@ -37,7 +38,6 @@ function WorkerForm() {
       });
     }
   };
-
   return (
     <>
       <div>
@@ -109,5 +109,7 @@ function WorkerForm() {
     </>
   );
 }
+
+
 
 export default WorkerForm;

@@ -10,10 +10,10 @@ function WorkersList() {
     const { value: formValues } = await Swal.fire({
       title: "Alterar Cadastro",
       html:
-        '<input id="swal-input1"  placeholder="Digite o nome completo" class="swal2-input" value="' +
+        '<input id="swal-input1"  placeholder="Digite o nome completo" class="swal2-input" type="text" value="' +
         state.workersList.find((item) => item.id === id).name +
         '">' +
-        '<input id="swal-input2"  placeholder="Digite seu email" class="swal2-input" value="' +
+        '<input id="swal-input2"  placeholder="Digite seu email" class="swal2-input" type="email" value="' +
         state.workersList.find((item) => item.id === id).email +
         '">' +
         '<input id="swal-input3"  placeholder="Digite sua profissão" class="swal2-input" value="' +
