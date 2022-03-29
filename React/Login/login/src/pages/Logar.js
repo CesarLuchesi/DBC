@@ -2,6 +2,7 @@ import {useContext} from 'react'
 import { Formik, Field, Form } from 'formik';
 
 import { Autent } from '../context/Autent';
+import '../style/Form.css'
 
 
 function Login() {
@@ -9,8 +10,8 @@ function Login() {
   const {settLogin} = useContext(Autent);
 
   return (
-    <div>
-      <p>Login</p>
+    <div className='bloco'>
+      <h1 className='color'>Login</h1>
          <Formik
       initialValues={{
         usuario: '',
@@ -19,14 +20,14 @@ function Login() {
       }}
       onSubmit={settLogin}
     >
-      <Form>
-        <label htmlFor="usuario">First Name</label>
-        <Field id="usuario" name="usuario" placeholder="Digite seu login" />
+      <Form className='formulario'>
+        <label htmlFor="usuario">User</label>
+        <Field id="usuario" name="usuario" placeholder="Digite seu user" />
 
-        <label htmlFor="senha">Last Name</label>
-        <Field id="senha" name="senha" placeholder="Digite sua senha" />
+        <label htmlFor="senha">Senha</label>
+        <Field type='password' id="senha" name="senha" placeholder="Digite sua senha" />
 
-        <button type="submit">Submit</button>
+        <button type="submit">Enviar</button>
       </Form>
     </Formik>
       </div>

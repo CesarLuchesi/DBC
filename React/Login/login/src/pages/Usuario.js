@@ -2,22 +2,24 @@ import {useEffect, useContext} from 'react';
 
 import {Autent} from '../context/Autent';
 import {useNavigate} from 'react-router-dom'
+
+import '../style/Form.css'
  
 function Users() {
 
   const {settLogout} = useContext(Autent)
-  const navigate = useNavigate();
+  const navegar = useNavigate();
 
   useEffect(() => {
     const localToken = localStorage.getItem('token');
     if(!localToken){
-      navigate('/login')
+      navegar('/login')
     }
   },[])
   return (
-    <div>
-      <h1>Usuario</h1>
-      <button onClick={settLogout}>sair</button>
+    <div className='usuario'>
+      <h1 className='color'>Usuario</h1>
+      <button className='botaoSair' onClick={settLogout}>Sair</button>
     </div>
   )
 }

@@ -8,7 +8,7 @@ export const Autent = createContext();
 function Autentica({children}){
 const [token, setToken] = useState('');
 const [login, setLogin] = useState(false);
-const navigate = useNavigate();
+const navegar = useNavigate();
 
 async function settLogin(values){
   try{
@@ -17,7 +17,7 @@ async function settLogin(values){
   localStorage.setItem('token', JSON.stringify(data));
   setLogin(true);
   api.defaults.headers.Authorization = data;
-  navigate('/usuario')
+  navegar('/Usuario')
 } catch (error){
   console.log(error)
 }
@@ -26,7 +26,7 @@ async function settLogin(values){
 function settLogout(){
   localStorage.removeItem('token')
   setLogin(false);
-  navigate('/')
+  navegar('/')
 }
   return(
     <Autent.Provider value={{token, login, settLogin,settLogout}}>
