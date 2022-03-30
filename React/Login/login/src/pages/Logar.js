@@ -1,5 +1,6 @@
-import {useContext} from 'react'
+import {useContext, useEffect} from 'react'
 import { Formik, Field, Form } from 'formik';
+import { useNavigate } from 'react-router-dom';
 
 import { Autent } from '../context/Autent';
 import '../style/Form.css'
@@ -18,7 +19,9 @@ function Login() {
         senha: '',
         
       }}
-      onSubmit={settLogin}
+      onSubmit={async(values) =>{
+        await settLogin(values)
+      }}
     >
       <Form className='formulario'>
         <label htmlFor="usuario">User</label>
