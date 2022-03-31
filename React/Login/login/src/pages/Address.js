@@ -104,12 +104,12 @@ validationSchema={addressSchema}
 
               <div>
                 <div><label htmlFor="cidade">Cidade</label></div>
-                <div><Field pattern='[A-Za-z]{3,25}' id="cidade" name="cidade" placeholder="Cidade" /></div>
+                <div><Field pattern='[A-Za-z]{3,}' id="cidade" name="cidade" placeholder="Cidade" /></div>
               </div>
 
               <div>
                 <div><label htmlFor="estado">Estado</label></div>
-                <div><Field pattern='[A-Za-z]{2,25}' id="estado" name="estado"  placeholder="Estado" /></div>
+                <div><Field pattern='[A-Za-z]{2,2}' id="estado" name="estado"  placeholder="Estado" /></div>
               </div>
 
               <div>
