@@ -8,7 +8,6 @@ export const Autent = createContext();
 function Authenticate({children}){
 const [token, setToken] = useState('');
 const [login, setLogin] = useState(false);
-const [people, setPeople] = useState([]);
 const navigate = useNavigate();
 const takToken = localStorage.getItem('token');
 
@@ -31,18 +30,6 @@ async function settLogin(values){
     }
 }
 
-async function peoples(){
-  try{
-    const {data} = await api.get('/pessoa');
-    setPeople(data);
-  }
-  catch (error){
-    console.log(error)
-  }
-}
-
-
-
 function settLogout(){
       localStorage.removeItem('token')
       navigate('/Logar')
@@ -62,7 +49,7 @@ function okLogged(){
     )
   }
   return(
-    <Autent.Provider value={{token, login, settLogin,settLogout,okLogged, people, setPeople, peoples, Authenticate,navigate,takToken}}>
+    <Autent.Provider value={{token, login, settLogin,settLogout,okLogged,Authenticate,navigate,takToken}}>
         {children}
     </Autent.Provider>
   )

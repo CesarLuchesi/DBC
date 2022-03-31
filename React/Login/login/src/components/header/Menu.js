@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../../style/Header.css'
 
 export default function Menu() {
   const token = localStorage.getItem('token');
   return (
     <div>
-      <nav>
+      <nav className='headerMenu'>
         <ul>
         { token ?
            <>
@@ -15,11 +16,15 @@ export default function Menu() {
           <li>
           <Link to={"/Usuario"}>User</Link>
           </li>
+          <li>
+            <Link to={"/address"}>Endereço</Link>
+          </li>
           </>
           :
           <li>
           <Link to={"/Logar"}>Login</Link>
-          </li>}
+          </li>
+          }
         </ul>
       </nav>
     </div>

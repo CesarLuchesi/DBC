@@ -3,7 +3,7 @@ import { Formik, Field, Form } from 'formik';
 import { useNavigate } from 'react-router-dom';
 
 import { Autent } from '../context/Autent';
-import '../style/Form.css'
+import '../style/Login.css'
 
 
 function Login() {
@@ -24,13 +24,13 @@ function Login() {
       }}
     >
       <Form className='formulario'>
-        <label htmlFor="usuario">User</label>
+        <label  htmlFor="usuario">User</label>
         <Field id="usuario" name="usuario" placeholder="Digite seu user" />
 
         <label htmlFor="senha">Senha</label>
         <Field type='password' id="senha" name="senha" placeholder="Digite sua senha" />
 
-        <button type="submit">Enviar</button>
+        <button className='buttonSubmit' type="submit">Enviar</button>
       </Form>
     </Formik>
       </div>

@@ -4,8 +4,13 @@ import { Autent } from '../context/Autent';
 
 
 export default function Home() {
-  const {okLogged,settLogout} = useContext(Autent);
+  const {okLogged,settLogout,takToken,navigate} = useContext(Autent);
 
+  function config() {
+    if(!takToken){
+      navigate('/Logado')
+    }
+  }
   useEffect(() =>{
     okLogged()
   },[])
@@ -13,8 +18,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Bença de Deus</h1>
-      <button className='botaoSair' onClick={settLogout}>Sair</button>
+      <h1>Home</h1>
       </div>
   )
 }
