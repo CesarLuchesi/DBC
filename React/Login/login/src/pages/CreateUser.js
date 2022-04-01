@@ -18,7 +18,6 @@ function CreateUser() {
   const {people,peoples, loading, error, isAtualizar, setIsAtualizar,} = useContext(UserContext);
 const location = useLocation();
 
-const [atualizarUser, setAtualizarUser] = useState({});
   const positiveAlert = () => toast("Usuário cadastrado.");
   const negativeAlert = () => toast("Usuário alterado.");
 
@@ -51,27 +50,25 @@ const [atualizarUser, setAtualizarUser] = useState({});
     }
   }
 
-  function dadosAtualizados(values) {
-    setAtualizarUser({
+
+  async function atualizarUsuario(values) {
+    const userAlt={
       cpf: values.cpf,
       dataNascimento: moment(values.dataNascimento, "DD/MM/YYYY").format(
         "YYYY-MM-DD"
       ),
       email: values.email,
       nome: values.nome,
-    });
-  }
-
-  async function atualizarUsuario(values) {
+    };
     const idUsuario = location.pathname.substring(13);
     try {
       if (
-        atualizarUser.cpf.length !== 11 ||
-        atualizarUser.dataNascimento.length !== 10
+        userAlt.cpf.length !== 11 ||
+        userAlt.dataNascimento.length !== 10
       ) {
-        alert("alerta");
+       negativeAlert();
       } else {
-        api.put(`/pessoa/${idUsuario}`, atualizarUser);
+       await api.put(`/pessoa/${idUsuario}`,userAlt);
         alert("usuário alterado!");
         setIsAtualizar(false);
         navigate("/usuario");
@@ -97,7 +94,9 @@ const [atualizarUser, setAtualizarUser] = useState({});
   // } else {
   return (
     <div>
-      <h1>CreateUser</h1>
+      {isAtualizar ? (
+                 <h1>Atualizar</h1>
+              ):(<h1>Cadastrar</h1>)}
       <Formik
       initialValues={{
         cpf: '',
@@ -133,7 +132,6 @@ const [atualizarUser, setAtualizarUser] = useState({});
               {isAtualizar && (
                 <button
                   type="submit"
-                  onClick={() => dadosAtualizados(props.values)}
                 >
                   Atualizar
                 </button>
