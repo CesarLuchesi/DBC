@@ -15,7 +15,7 @@ import api from '../api';
 function Users() {
   const navigate = useNavigate();
   const {settLogout, takToken } = useContext(Autent)
-  const {people,peoples, loading, error} = useContext(UserContext);
+  const {people,peoples, loading, error,isAtualizar, setIsAtualizar,setValuesUser} = useContext(UserContext);
   
 
   const formatCpf = (cpf) => {
@@ -23,27 +23,50 @@ function Users() {
     return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
 }
 
-  const handleDelete = async (id) => {
-    try {
-      Swal.fire({
-        title: 'Deseja remover o trabalhador?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: 'Não Deletar',
-        denyButtonText: `Deletar`,
-      }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {{  await api.delete(`/pessoa/${id}`)
-          Swal.fire('Saved!', '', 'success')
-        } if (result.isDenied) {
-          Swal.fire('Usuario não foi deletado', '', 'info')
-        }}
-      })
-    } catch{
-      console.log("Erro ao tentar acessar a api usuario" );
-    }
+useEffect(() => {
+  setValuesUser({});
+  //eslint-disable-next-line
+}, [])
+
+function navigateAtualizar(id, user) {
+  setValuesUser(user);
+  navigate(`/create-user/${id}`);
+  setIsAtualizar(true);
 }
-  
+
+const deletaAPI = async (id) => {
+  await api.delete(`pessoa/${id}`).then((result1) => {
+    if (result1.isConfirmed) {
+      Swal.fire("Saved!", "", "success");
+    }
+    if (result1.isDenied) {
+      Swal.fire("Usuario não foi deletado", "", "info");
+    }
+  });
+};
+
+const handleDelete = async (id) => {
+  try {
+    Swal.fire({
+      title: "Deseja remover o trabalhador?",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Deletar",
+      denyButtonText: "Não Deletar",
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        deletaAPI(id);
+      }
+      if (result.isDenied) {
+        Swal.fire("Usuario não foi deletado", "", "info");
+      }
+    });
+  } catch {
+    console.log("Erro ao tentar acessar a api usuario");
+  }
+};
+
 
 function config() {
     if(!takToken){
@@ -58,12 +81,11 @@ useEffect(() => {
     config();
   },[])
 
-  if(loading){
-    return (<Loading/>)
-  }
-  if(error) {
-    return (<Error/>)
-  }
+  if (loading) {
+    return <Loading />;
+  } else if (error) {
+    return <Error />;
+  } else {
   return (
     <div className='usuario'>
       <h1 className='color'>Usuario</h1>
@@ -73,11 +95,12 @@ useEffect(() => {
           <h3>{pessoa.nome}</h3>
           <p>{formatCpf(pessoa.cpf)}</p>
           <p>{moment(pessoa.dataNascimento).format('DD/MM/YYYY')}</p> 
-          <button onClick={handleDelete}>Deletar</button>
-          <button onClick={() => navigate(`/creat-user/${pessoa.idpessoa}`)}>Atualizar</button>
+          <button onClick={() => handleDelete(pessoa.idPessoa)}>Deletar</button>
+          <button onClick={() => navigateAtualizar(pessoa.idPessoa, pessoa)}>Atualizar</button>
         </div>
       ))}
     </div>
   )
+}
 }
 export default Users;
