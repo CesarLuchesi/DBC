@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {UserContext} from '../context/UserContext';
 import Loading from '../components/loading/Loading'
 import Error from '../components/error/Error'
+import '../style/CreateUser.css'
 
 function CreateUser() {
   const {settLogout,takToken,navigate,config, } = useContext
@@ -93,7 +94,7 @@ const location = useLocation();
   //   return <Error />;
   // } else {
   return (
-    <div>
+    <div >
       {isAtualizar ? (
                  <h1>Atualizar</h1>
               ):(<h1>Cadastrar</h1>)}
@@ -109,7 +110,7 @@ const location = useLocation();
       }}
     >
     {(props) => (
-      <Form>
+      <Form className='cadastroUsuario'>
         <label htmlFor="nome">Nome</label>
         <Field id="nome" name="nome" placeholder="Digite seu Nome:" />
 

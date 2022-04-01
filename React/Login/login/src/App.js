@@ -11,6 +11,8 @@ import NotFound from './pages/NotFound';
 import Address from './pages/Address';
 import CreateUser from './pages/CreateUser';
 import UserProvider from './context/UserContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap'
 
 function App() {
   return (

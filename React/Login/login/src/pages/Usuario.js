@@ -3,6 +3,10 @@ import moment from 'moment';
 import {useNavigate,Link} from 'react-router-dom'
 import Swal from "sweetalert2";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap'
+import { Navbar,Container,Nav, Button,Stack} from 'react-bootstrap';
+
 import '../style/User.css'
 
 import {Autent} from '../context/Autent';
@@ -89,9 +93,9 @@ useEffect(() => {
   return (
     <div className='usuario'>
       <h1 className='color'>Usuario</h1>
-      <Link to='/create-user'>Cadastrar Usuario</Link>
+      <><Button variant="info"><Link to='/create-user'>Cadastrar Usuario</Link></Button></>
       {people.map(pessoa =>(
-        <div key={pessoa.idPessoa}>
+        <div className='usercadastro' key={pessoa.idPessoa}>
           <h3>{pessoa.nome}</h3>
           <p>{formatCpf(pessoa.cpf)}</p>
           <p>{moment(pessoa.dataNascimento).format('DD/MM/YYYY')}</p> 
