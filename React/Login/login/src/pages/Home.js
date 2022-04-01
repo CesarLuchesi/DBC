@@ -4,9 +4,9 @@ import { Autent } from '../context/Autent';
 
 
 export default function Home() {
-  const {okLogged,settLogout,takToken,navigate} = useContext(Autent);
+  const {settLogout,takToken,navigate,config} = useContext(Autent);
 
-  function config() {
+  function okLogged() {
     if(!takToken){
       navigate('/Logado')
     }

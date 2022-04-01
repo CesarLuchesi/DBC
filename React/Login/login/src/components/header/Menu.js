@@ -21,9 +21,7 @@ export default function Menu() {
           </li>
           </>
           :
-          <li>
-          <Link to={"/Logar"}>Login</Link>
-          </li>
+          null
           }
         </ul>
       </nav>

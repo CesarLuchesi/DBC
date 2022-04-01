@@ -1,11 +1,22 @@
-import React from 'react'
+import {React, useContext, useEffect} from 'react'
+import { Autent } from '../context/Autent';
 import { useState } from 'react';
 import {  Formik, Form, Field } from 'formik';
 import axios from 'axios';
 import * as yup from 'yup';
 
 function Address() {
+  const {settLogout,takToken,navigate,config} = useContext(Autent);
   const [dataCep, setDataCep] = useState([])
+
+  function okLogged() {
+    if(!takToken){
+      navigate('/Logado')
+    }
+  }
+  useEffect(() =>{
+    okLogged()
+  },[])
 
   function onSubmit(values){
     alert(JSON.stringify(values, null, 2))
