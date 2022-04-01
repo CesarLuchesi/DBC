@@ -15,13 +15,6 @@ export default function Footer() {
     <div>
       <Badge bg="primary"> &copy; Copyright: Vem-Ser 2022</Badge>
       </div>
-      <Nav.Link ><Link to={"/"}>Home</Link></Nav.Link>
-      <div className="vr ms-auto" />
-      <Nav.Link ><Link to={"/Usuario"}>User</Link></Nav.Link>
-      <div/>
-      <Nav.Link><Link to={"/address"}>Endereço</Link></Nav.Link>
-      <div/>
-     
     </Nav>
     </Stack>
     </Container>

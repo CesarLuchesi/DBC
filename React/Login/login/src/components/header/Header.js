@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap'
 import { Navbar,Container,Nav, Button,Stack} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import nike from '../../images/nike.jpg'
+import '../../style/Header.css'
 
 
 
@@ -21,7 +23,7 @@ export default function Header() {
   <Navbar  bg="dark" variant="dark">
     <Container>
     
-    <Navbar.Brand><Logo/></Navbar.Brand>
+    <Navbar.Brand><img className='photo' src={nike} alt="Erou"/></Navbar.Brand>
     <Stack direction="horizontal"  gap={4}>
     <Nav className="me-auto">
       <Nav.Link ><Link to={"/"}>Home</Link></Nav.Link>

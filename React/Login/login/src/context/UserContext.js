@@ -13,7 +13,6 @@ function UserProvider({children}){
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [isAtualizar, setIsAtualizar] = useState(false)
-  const [valuesUser, setValuesUser] = useState({})
 
   async function peoples(){
     try{
@@ -30,7 +29,7 @@ function UserProvider({children}){
   
 
   return(
-    <UserContext.Provider value={{people,peoples, loading, error,isAtualizar, setIsAtualizar,setValuesUser,valuesUser}}>
+    <UserContext.Provider value={{people,peoples, loading, error,isAtualizar, setIsAtualizar}}>
       {children}
     </UserContext.Provider>
   )

@@ -19,7 +19,7 @@ import api from '../api';
 function Users() {
   const navigate = useNavigate();
   const {settLogout, takToken } = useContext(Autent)
-  const {people,peoples, loading, error,isAtualizar, setIsAtualizar,setValuesUser} = useContext(UserContext);
+  const {people,peoples, loading, error,isAtualizar, setIsAtualizar} = useContext(UserContext);
   
 
   const formatCpf = (cpf) => {
@@ -27,16 +27,8 @@ function Users() {
     return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
 }
 
-useEffect(() => {
-  setValuesUser({});
-  //eslint-disable-next-line
-}, [])
 
-function navigateAtualizar(id, user) {
-  setValuesUser(user);
-  navigate(`/create-user/${id}`);
-  setIsAtualizar(true);
-}
+
 
 const deletaAPI = async (id) => {
   await api.delete(`pessoa/${id}`).then((result1) => {
@@ -100,7 +92,7 @@ useEffect(() => {
           <p>{formatCpf(pessoa.cpf)}</p>
           <p>{moment(pessoa.dataNascimento).format('DD/MM/YYYY')}</p> 
           <button onClick={() => handleDelete(pessoa.idPessoa)}>Deletar</button>
-          <button onClick={() => navigateAtualizar(pessoa.idPessoa, pessoa)}>Atualizar</button>
+          <button onClick={() => (pessoa.idPessoa, pessoa)}>Atualizar</button>
         </div>
       ))}
     </div>

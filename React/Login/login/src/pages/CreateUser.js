@@ -55,17 +55,13 @@ const location = useLocation();
   async function atualizarUsuario(values) {
     const userAlt={
       cpf: values.cpf,
-      dataNascimento: moment(values.dataNascimento, "DD/MM/YYYY").format(
-        "YYYY-MM-DD"
-      ),
       email: values.email,
       nome: values.nome,
     };
     const idUsuario = location.pathname.substring(13);
     try {
       if (
-        userAlt.cpf.length !== 11 ||
-        userAlt.dataNascimento.length !== 10
+        userAlt.cpf.length !== 11
       ) {
        negativeAlert();
       } else {
@@ -88,11 +84,6 @@ const location = useLocation();
     okLogged()
   },[])
 
-  // if (loading) {
-  //   return <Loading />;
-  // } else if (error) {
-  //   return <Error />;
-  // } else {
   return (
     <div >
       {isAtualizar ? (
